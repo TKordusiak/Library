@@ -1,0 +1,31 @@
+package app;
+
+import io.DataReader;
+import model.Book;
+
+public class LibraryApp {
+
+	public static void main(String[] args) {
+		
+		final String appName = "Biblioteka v0.5";
+		
+		Book[] books = new Book[100];
+		DataReader dataReader = new DataReader();
+
+		
+		System.out.println(appName);
+		System.out.println("Wprowadz now¹ ksi¹¿kê:");
+		books[0] = dataReader.readAndCreateBook();
+		books[1] = dataReader.readAndCreateBook();
+		dataReader.close();
+		
+		
+		books[0].printInfo();
+		books[1].printInfo();
+		
+		System.out.println("System mo¿e pomieœciæ "+books.length+" ksi¹¿ek");
+	}
+
+	
+	
+}

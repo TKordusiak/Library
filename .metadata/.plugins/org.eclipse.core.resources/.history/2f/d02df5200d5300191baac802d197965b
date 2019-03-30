@@ -1,0 +1,34 @@
+package app;
+
+import io.DataReader;
+import model.Book;
+
+public class LibraryApp {
+
+	public static void main(String[] args) {
+		
+		final String appName = "Biblioteka v0.5";
+		
+		Book[] books = new Book[100];
+		DataReader dataReader = new DataReader();
+		
+//		 books[0] = new Book("W pustyni i paszczy", "Henryn Sienkiewicz", 2012, 350, "Zyk-Zak", "123456789");
+//		 books[1] = new Book("Chê ¿yæ", "Rysiek Ridel", 5, 1998, "Zik-Zak", "213456789");
+//		 books[2] = new Book ("Coœ posz³o nie tak", "Adam z Raju", 1500, 0, "Bog");
+		
+		System.out.println(appName);
+		System.out.println("Wprowadz now¹ ksi¹¿kê:");
+		books[0] = dataReader.readAndCreateBook();
+		books[1] = dataReader.readAndCreateBook();
+		dataReader.close();
+		
+		
+		books[0].printInfo();
+		books[1].printInfo();
+		
+		System.out.println("System mo¿e pomieœciæ "+books.length+" ksi¹¿ek");
+	}
+
+	
+	
+}

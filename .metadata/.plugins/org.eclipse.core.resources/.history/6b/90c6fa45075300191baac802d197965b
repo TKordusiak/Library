@@ -1,0 +1,24 @@
+package app;
+
+import model.Book;
+
+public class Library {
+
+	public static void main(String[] args) {
+		
+		final String appName = "Biblioteka v0.5";
+		
+		Book book1 = new Book("W pustyni i paszczy", "Henryn Sienkiewicz", 2012, 350, "Zyk-Zak", "123456789");
+		Book book2 = new Book("Chê ¿yæ", "Rysiek Ridel", 5, 1998, "Zik-Zak", "213456789");
+		Book book3 = new Book ("Coœ posz³o nie tak", "Adam z Raju", 1500, 0, "Bog", "000");
+		
+		System.out.println(appName);
+		System.out.println("Dostêpmne ksi¹zki:");
+		book1.printInfo();
+		book2.printInfo();
+		book3.printInfo();
+	}
+
+	
+	
+}

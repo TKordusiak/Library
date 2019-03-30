@@ -1,0 +1,42 @@
+package io;
+
+import java.util.Scanner;
+
+import model.Book;
+
+public class DataReader {
+	 
+	private Scanner sc = new Scanner(System.in);
+	
+	public void close() {
+		sc.close();
+	}
+	
+	public int getInt() {
+		int number = sc.nextInt();
+		sc.close();
+		return number;
+		
+	}
+	
+	public Book readAndCreateBook() {
+		
+		System.out.println("Tytu³:");
+		String title = sc.nextLine();
+		System.out.println("Autor:");
+		String author = sc.nextLine();
+		System.out.println("Data publikacji");
+		int releaseDate = getInt();
+		System.out.println("Iloœæ stron");
+		int pages = getInt();
+		System.out.println("Wydawnictwo");
+		String publisher = sc.nextLine();
+		System.out.println("ISBM");
+		String isbn = sc.nextLine();
+	
+		
+		return new Book(title, author, releaseDate, pages, publisher, isbn);
+		
+	}
+
+}

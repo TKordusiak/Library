@@ -1,0 +1,15 @@
+package model;
+
+public class Books {
+	
+	private String title;
+	private String author; 
+	private int releaseDate;
+	private int pages;
+	private String publisher;
+	private String isbn;
+	
+	
+	
+	
+}
