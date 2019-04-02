@@ -3,6 +3,7 @@ package io;
 import java.util.Scanner;
 
 import model.Book;
+import model.Magazine;
 
 public class DataReader {
 	 
@@ -36,6 +37,22 @@ public class DataReader {
 	
 		
 		return new Book(title, author, releaseDate, pages, publisher, isbn);
+		
+	}
+	
+	public Magazine readAndCreateMagazine() {
+		System.out.println("Tytu³:");
+		String title = sc.nextLine();
+		System.out.println("Wydawca");
+		String publisher = sc.nextLine();
+		System.out.println("Rok:");
+		int year = getInt();
+		System.out.println("Miesi¹c:");
+		int month = getInt();
+		System.out.println("Dzieñ:");
+		int day = getInt();
+		String language = sc.nextLine();
+		return new Magazine(year, title, publisher, month, day, language);
 		
 	}
 
