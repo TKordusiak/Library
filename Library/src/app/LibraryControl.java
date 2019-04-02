@@ -82,5 +82,6 @@ public class LibraryControl {
 		System.out.println(ADD_BOOK + " - Dodaj ksi¹¿kê");
 		System.out.println(ADD_MAGAZINE + " - Dodaj magazyn");
 		System.out.println(PRINT_BOOK + " - Wyœwietkl ksi¹¿ki");
+		System.out.println(PRINT_MAGAZINE+" - Wyœwietl magazyny");
 	}
 }
