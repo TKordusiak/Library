@@ -29,7 +29,7 @@ public class ConsolePrinter {
 		}
 	}
 
-	private void printLine(String text) {
+	public void printLine(String text) {
 		System.out.println(text);
 	}
 
